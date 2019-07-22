@@ -14,6 +14,15 @@ module.exports = (app) => {
 
     //ההבדל בין שתי הפקודות למעלה:
     //בגלל שמהקולבק חוזר גם קוד, פספורט ידע להפנות למקום הנכון
+
+    app.get('/auth/current_user', (req, res) => {
+        res.send(req.user);
+    })
+
+    app.get('/api/logout', (req, res) => {
+        req.logout();
+        res.send(req.user);
+    })
 }
 
 
