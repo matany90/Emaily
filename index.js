@@ -13,7 +13,7 @@ mongoose.connect(keys.mongoURI);
 //define instance of express library
 const app = express();
 
-/* app middleware*/
+/* app middleware */
 //define usage of cookies
 app.use(
     cookieSession({
